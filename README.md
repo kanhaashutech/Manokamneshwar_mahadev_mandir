@@ -10,15 +10,17 @@ Home
 
 About
 
-Donate 
-
-Contact
-
 Gallery
+
+Donate 
 
 Aarti Video
 
 Bhajans
+
+Contact
+
+
 
 
 ## Socials 
