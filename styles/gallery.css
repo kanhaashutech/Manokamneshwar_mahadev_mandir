@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Google font defined  */
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 200 to 800 */
+
+/* Normal FONT for Heading  */
+
+.assistant-ass_variable {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Normal FONT for Sub-Heading  */
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Paragrapgh font */
+
+.ysabeau-office-para-font {
+  font-family: "Ysabeau Office", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*  Hindi Font */
+.tiro-devanagari sanskrit-regular {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiro-devanagari sanskrit-regular-italic {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Font Section Ends */
+
+
+
+/* ---------------------------------- *\
+  # Universal elements declared 
+\* ---------------------------------- */
+
+:root {
+
+  /* font family */
+
+  --ff-hindi: "Tiro Devanagari Sanskrit", serif;
+  --ff-heading-assistant: "Assistant", sans-serif;
+  --ff-s-heading-tenor: "Tenor Sans", sans-serif;
+  --ff-para-ysabeau: "Ysabeau Office", sans-serif;
+
+  /* font colors */
+
+  --fc-black: #000000;
+  --fc-white: #fff;
+  --fc-orange: #ff6f00;
+  --fc-dark-gray: #151414;
+
+  /* colors */
+  --col-yellow: #ffbb00;
+
+  /* Gradient */
+
+  /* --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff9900, #ffd70d); */
+  --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff5900, #ff8e0d);
+  --lg-yellow: radial-gradient(#fff700, #ffffff);
+
+}
+
+body {
+  margin: auto;
+}
+
+.gall_container .gall_img {
+
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.gall_container .gall_img .mandir_video_bg {
+  /* background-color: #aaa; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gall_container .gall_img .mandir_video_bg video {
+  width: 75rem;
+  border-radius: 3rem;
+}
+
+
+.gall_container .gall_img .mandir_img {
+  width: 100%;
+  /* background-color: rgb(255, 252, 247); */
+  border-radius: 3rem;
+  /* margin: auto; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  padding: 2rem 1rem;
+  overflow: hidden;
+
+}
+
+.gall_container .gall_img .mandir_img img {
+  width: 23rem;
+  /* max-width: 23rem; */
+  margin: 1rem;
+  border-radius: 1.5rem;
+  filter: drop-shadow(2px 2px 5px #7f7f7f);
+  transition: all .3s ease-in-out;
+  object-fit: cover;
+}
+
+.gall_container .gall_img .mandir_img img:hover {
+  transform: scale(1.03);
+
+}
+
+.gall_container .gall_img .mandir_img img:nth-child(1) {
+  width: 35rem;
+}
+
+.gall_container .gall_img .mandir_img img:nth-child(5) {
+  width: 35rem;
+}
+
+.gall_container .gall_img .mandir_img img:nth-child(8) {
+  width: 35rem;
+}
+
+.gall_container .gall_shivratri h1 {
+
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--ff-para-ysabeau);
+  color: var(--fc-orange);
+  background: #fff;
+  border-top: 2px solid var(--fc-orange);
+  border-bottom: 2px solid var(--fc-orange);
+  padding: 1rem 0;
+  position: relative;
+
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #fff; */
+
+  overflow: hidden;
+  z-index: 3;
+  text-shadow: 0 0 5px #ffffff;
+  /* filter: drop-shadow(0 0 3px #ffffff); */
+  /* -webkit-text-stroke: 5px ; */
+  /* -webkit-text-stroke-color: #fff; */
+}
+
+.gall_container .gall_shivratri h1 img {
+  position: absolute;
+  top: -9.5rem;
+  left: 0;
+  height: 25rem;
+  width: 10rem;
+  filter: opacity(.85);
+
+  z-index: -1;
+  transform: rotate(90deg);
+
+  animation: trishul 3s cubic-bezier(0.3, 1, 0.5, .25) .2s infinite;
+}
+
+@keyframes trishul {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+
+/*--------------------- slider-----------------------------*/
+
+.slide_container {
+  padding: 2rem 0 1rem;
+}
+
+.slider {
+  width: 85rem;
+  /* max-width: 100vw; */
+  height: 680px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.5rem;
+}
+
+.slider .list {
+  position: absolute;
+  /* width: max-content; */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s ease-in-out;
+}
+
+.slider .list img {
+  /* width: 1300px; */
+  width: 85rem;
+  /* max-width: 100vw; */
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+
+  filter: drop-shadow(1px 1px 5px #000000);
+}
+
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.slider .dots li.active {
+  width: 30px;
+}
+
+/* @media screen and (max-width: 768px){
+  .slider{
+      height: 400px;
+  }
+} */
+
+.members {
+  padding: 2rem 0;
+
+}
+
+.members h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--ff-para-ysabeau);
+  color: var(--fc-orange);
+  background: #fff;
+  border-top: 2px solid var(--fc-orange);
+  border-bottom: 2px solid var(--fc-orange);
+  padding: 1rem 0;
+  position: relative;
+
+  /* -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #fff; */
+
+  overflow: hidden;
+  z-index: 3;
+  text-shadow: 0 0 5px #ffffff;
+  text-transform: uppercase;
+}
+
+.mem_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.mem_container .card {
+  /* min-height: 19rem; */
+
+  width: 14rem;
+  background: #ffffff;
+  border-radius: 8px;
+  /* filter: drop-shadow(0 0 5px #ff4d006c); */
+  border: 1.2px solid #ff2200;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.mem_container .card .c-img {
+  width: 100%;
+  height: 14rem;
+  filter: none;
+  overflow: hidden;
+}
+
+.mem_container .card .c-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: none;
+  transition: all .3s ease-in-out;
+}
+
+.mem_container .card .c-txt {
+  /* height: 20%; */
+  border-radius: 8px;
+}
+
+.mem_container .card .c-txt h3 {
+  text-align: center;
+  font-family: var(--ff-heading-assistant);
+  margin-top: 3px;
+  color: var(--fc-orange);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.mem_container .card .c-txt h5 {
+  text-align: center;
+  font-family: var(--ff-para-ysabeau);
+  /* margin-top: 1px; */
+  color: #797979;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.mem_container .card .c-txt .mem-socials {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: #7f7f7f; */
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #ff5900;
+  margin-top: 8px;
+}
+
+.mem_container .card .c-txt .mem-socials a {
+  border: 1px solid #ff5900;
+  /* padding: 10px; */
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+  color: #ff5900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-style: none;
+  transition: all .3s ease-in-out;
+}
+
+.mem_container .card .c-txt .mem-socials a:hover {
+  color: var(--fc-white);
+  background: var(--fc-orange);
+  filter: drop-shadow(0 0 3.5px #ff5900c2);
+}
+
+.mem_container .card:hover {
+  filter: drop-shadow(0 0 6px #ff4d007c);
+  transform: scale(1.04);
+}
+
+
+.mem_container .card .c-img img:hover {
+  transform: scale(1.1);
+}
+
+
+#contact{
+  padding: 0 0 2rem;
+}
