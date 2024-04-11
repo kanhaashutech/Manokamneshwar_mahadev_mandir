@@ -1,5 +1,6 @@
 # Manokamneshwar_mahadev_mandir
  Jai Shree Mahakaal, This is the official website of our Manokamneshwar Mahadev  Mandir
+ https://kanhaashutech.github.io/Manokamneshwar_mahadev_mandir/
 
 _Manokamneshwar Mahadev  Mandir Shantinagar_
 
