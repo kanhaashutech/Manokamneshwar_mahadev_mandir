@@ -1,5 +1,470 @@
-*{
-margin: 0;
-padding: 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+/* Google font defined  */
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 200 to 800 */
+
+/* Normal FONT for Heading  */
+
+.assistant-ass_variable {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Normal FONT for Sub-Heading  */
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Paragrapgh font */
+
+.ysabeau-office-para-font {
+  font-family: "Ysabeau Office", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*  Hindi Font */
+.tiro-devanagari sanskrit-regular {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiro-devanagari sanskrit-regular-italic {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Font Section Ends */
+
+
+
+/* ---------------------------------- *\
+  # Universal elements declared 
+\* ---------------------------------- */
+
+:root {
+
+  /* font family */
+
+  --ff-hindi: "Tiro Devanagari Sanskrit", serif;
+  --ff-heading-assistant: "Assistant", sans-serif;
+  --ff-s-heading-tenor: "Tenor Sans", sans-serif;
+  --ff-para-ysabeau: "Ysabeau Office", sans-serif;
+
+  /* font colors */
+
+  --fc-black: #000000;
+  --fc-white: #fff;
+  --fc-orange: #ff6f00;
+  --fc-dark-gray: #151414;
+
+  /* colors */
+  --col-yellow: #ffbb00;
+
+  /* Gradient */
+
+  /* --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff9900, #ffd70d); */
+  --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff5900, #ff8e0d);
+  --lg-yellow: radial-gradient(#fff700, #ffffff);
+
+}
+
+body {
+  margin: auto;
+}
+
+
+.donate h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: var(--ff-para-ysabeau);
+  color: var(--fc-black);
+  background: #fff;
+  border-bottom: 2px solid var(--fc-orange);
+  padding: 1rem 0;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+.donate h1 i {
+  color: var(--fc-orange);
+  font-size: 2.5rem;
+  margin: 0 2rem;
+}
+
+.donate_p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 40rem;
+  position: relative;
+  /* background-color: aqua; */
+  padding: 0 5rem;
+  flex-wrap: wrap;
+}
+
+
+/* ----------------- back text----------- */
+.donate_p::after {
+  content: "OM NAMAH SHIVAY";
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-size: 10rem;
+  font-weight: 900;
+  color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 0 1.5rem;
+
+  -webkit-text-stroke: 2px #ff550070;
+  z-index: 1;
+}
+
+
+
+.donate_p .donate-txt {
+  width: 50%;
+  z-index: 3;
+}
+
+.donate_p .donate-txt h2 {
+  font-family: var(--ff-s-heading-tenor);
+  font-weight: 600;
+  font-size: 2.89rem;
+  line-height: 4rem;
+}
+
+.donate_p .donate-txt p {
+  font-family: var(--ff-para-ysabeau);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #353030;
+  margin-top: 1.5rem;
+}
+
+.donate_p .qr {
+  z-index: 3;
+  width: 30%;
+  min-height: 31rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 1rem 2rem;
+  background-color: #fff;
+  filter: drop-shadow(0 0 8px #ff9e8392);
+  border: 2px solid var(--fc-orange);
+  border-radius: 1rem;
+}
+
+.donate_p .qr h2 {
+  font-family: var(--ff-s-heading-tenor);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #3e3b3b;
+  letter-spacing: 1px;
+}
+
+.donate_p .qr .bank {
+
+  border-top: 1px solid #ff5900;
+  display: flex;
+  gap: 3px;
+  font-family: var(--ff-heading-assistant);
+  flex-direction: column;
+
+}
+
+.donate_p .qr .bank h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.donate_p .qr .bank h3 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.donate_p .qr .bank h3 span {
+  color: #646464;
+  font-family: var(--ff-para-ysabeau);
+}
+
+/* ===================== responsive code --------------------------  */
+
+@media screen and (max-width:1200px) {
+
+  .donate h1 {
+    font-size: 2.5rem;
+    padding: 5.8rem 0 .8rem;
+    /* position: static; */
+
+  }
+
+  .donate h1 i {
+    color: var(--fc-orange);
+    font-size: 2.2rem;
+    margin: 0 1.2rem;
+  }
+
+  .donate_p {
+    gap: 1rem;
+    min-height: 40rem;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+
+  /* ----------------- back text----------- */
+  .donate_p::after {
+    content: "OM NAMAH SHIVAY";
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 8rem;
+    padding: 0 1rem;
+  }
+
+
+
+  .donate_p .donate-txt {
+    width: 50%;
+    z-index: 3;
+  }
+
+  .donate_p .donate-txt h2 {
+    font-family: var(--ff-s-heading-tenor);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  .donate_p .donate-txt p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .donate_p .qr {
+    width: 35%;
+    min-height: 31rem;
+    gap: 5px;
+    padding: .8rem 1.3rem;
+    border-radius: 1rem;
+  }
+
+  .donate_p .qr h2 {
+    font-size: 1.3rem;
+  }
+
+  .donate_p .qr .bank {
+    gap: 3px;
+  }
+
+  .donate_p .qr .bank h2 {
+    font-size: 1.3rem;
+    margin-top: .7rem;
+    margin-bottom: 10px;
+  }
+
+  .donate_p .qr .bank h3 {
+    font-size: .9rem;
+    text-align: left;
+  }
+
+  .donate_p .qr .bank h3 span {
+    color: #646464;
+    font-family: var(--ff-para-ysabeau);
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .donate .donate_p {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    /* flex-wrap: wrap; */
+    flex-flow: wrap;
+    position: relative;
+  }
+
+  .donate_p::after {
+    content: "OM NAMAH SHIVAY";
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 5rem;
+    padding: 0 1rem; 
+  }
+
+}
+
+@media screen and (max-width:630px) {
+
+  .donate h1 {
+    font-size: 1.6rem;
+    padding: 5.2rem 0 .8rem;
+    /* position: static; */
+
+  }
+
+  .donate h1 i {
+    color: var(--fc-orange);
+    font-size: 1.4rem;
+    margin: 0 1rem;
+  }
+
+  .donate .donate_p {
+    /* gap: .7rem; */
+    padding: 0 .3rem;
+    flex-flow: wrap;
+  }
+
+  .donate_p::after {
+    content: "OM NAMAH SHIVAY";
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    font-size: 4rem;
+    padding: 0 0rem; 
+    
+  -webkit-text-stroke: 2px #ff804145;
+  }
+
+  
+
+  .donate_p .donate-txt {
+    width: 100%;
+    z-index: 3;
+    padding: .7rem .5rem;
+  }
+
+  .donate_p .donate-txt h2 {
+    font-family: var(--ff-s-heading-tenor);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .donate_p .donate-txt p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .donate_p .qr {
+    width: 80%;
+    min-height: 27rem;
+    gap: 5px;
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .donate_p .qr h2 {
+    font-size: 1rem;
+  }
+
+  .donate_p .qr .bank {
+    gap: 3px;
+  }
+
+  .donate_p .qr .bank h2 {
+    font-size: 1rem;
+    margin-top: .7rem;
+    margin-bottom: 10px;
+  }
+
+  .donate_p .qr .bank h3 {
+    font-size: .8rem;
+    text-align: left;
+  }
+
+  .donate_p .qr .bank h3 span {
+    color: #646464;
+    font-family: var(--ff-para-ysabeau);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------- responsive code ends---------------------------- */

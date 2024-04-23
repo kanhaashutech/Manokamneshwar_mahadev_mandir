@@ -121,7 +121,7 @@ body {
 
 }
 
-/* google translate css */
+/*--------------------- google translate css ----------------------*/
 
 
 /* .VIpgJd-ZVi9od-ORHb{
@@ -141,6 +141,7 @@ body {
 }
 
 #google_translate_element .skiptranslate select {
+    display: block;
     padding: 3px 5px;
     border: none;
     border-radius: 2px;
@@ -169,7 +170,7 @@ body {
 }
 
 
-
+/* ------------------ header css starts---------------- */
 header>nav {
     background: var(--lg-orange-yellow);
     height: 5rem;
@@ -180,6 +181,8 @@ header>nav {
     padding: 0 3rem;
     filter: drop-shadow(0 0 5px #818181);
 }
+
+
 
 nav a {
     display: flex;
@@ -233,6 +236,43 @@ nav ul li a:hover {
 
 }
 
+/* tablet */
+@media screen and (max-width:1200px) {
+    header>nav {
+        padding: 0 1.3rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    nav a img {
+        height: 4rem;
+    }
+
+    nav ul li {
+        font-size: 1rem;
+        margin: .6rem;
+    }
+
+    nav ul li a {
+        font-family: var(--ff-heading-assistant);
+        font-weight: 500;
+        font-size: 1.05rem;
+        transition: all .3s;
+    }
+
+    /* --- g translate ----- */
+    #google_translate_element .skiptranslate select {
+        padding: 3px 4px;
+        width: 6.85rem;
+        font-size: .75rem;
+    }
+}
+
+/* ------------------ header css ends---------------- */
+
 /* main section starts*/
 
 .main {
@@ -241,6 +281,7 @@ nav ul li a:hover {
     background: #fff;
     margin: auto;
 }
+
 
 /* home section */
 
@@ -265,6 +306,7 @@ nav ul li a:hover {
     border-radius: 12px;
     margin-top: 2rem;
     filter: drop-shadow(6px 7px .5px var(--col-yellow));
+    /* z-index: auto; */
 }
 
 .home .home_hero .home_txt h1 {
@@ -327,7 +369,7 @@ a .donate_btn_hero {
 }
 
 
-/* text anim strip jai strip */
+/* ------------- text anim strip jai strip --------------- */
 
 .home .jai_strip {
     background: var(--lg-orange-yellow);
@@ -349,10 +391,12 @@ a .donate_btn_hero {
     font-weight: 800;
     white-space: nowrap;
     text-overflow: clip;
+    z-index: 4;
     /* overflow: hidden; */
     transform: translateX(-50%);
     animation: jaistrip 15s linear .2s infinite;
 
+    /* position: absolute; */
     display: flex;
     align-items: center;
 }
@@ -360,9 +404,11 @@ a .donate_btn_hero {
 .home .jai_strip h1 svg {
     margin: 0 10px;
     color: rgb(255, 255, 255);
+    height: 2.2rem;
 }
 
-/* jai strip text animation */
+/* ------ jai strip text animation ----- */
+
 @keyframes jaistrip {
     from {
 
@@ -374,6 +420,349 @@ a .donate_btn_hero {
     }
 }
 
+#bars,
+#cross {
+    display: none;
+}
+
+
+/* ===========------------------ tablet --------------------- =============== */
+
+
+
+@media screen and (max-width:1200px) {
+
+    header>nav {
+        padding: 0 1.3rem;
+        position: fixed;
+        z-index: 500;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    nav a img {
+        height: 4rem;
+    }
+
+    nav ul li {
+        font-size: 1rem;
+        margin: .6rem;
+    }
+
+    nav ul li a {
+        font-family: var(--ff-heading-assistant);
+        font-weight: 500;
+        font-size: 1.05rem;
+        transition: all .3s;
+    }
+
+    /* --- g translate ----- */
+    #google_translate_element .skiptranslate select {
+        padding: 3px 4px;
+        width: 6.85rem;
+        font-size: .75rem;
+    }
+
+    .main .home .home_hero {
+        padding: 1.5rem 5rem;
+        gap: 5rem;
+    }
+
+
+    .home .home_hero .home_img img {
+        max-height: 25rem;
+        margin-top: 5.5rem;
+
+    }
+
+    .home .home_hero .home_txt h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin: .8rem 0;
+
+    }
+
+    .home .home_hero .home_txt p {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+
+    .home .home_txt .cta_btns {
+        gap: 2rem;
+        width: 80%;
+        margin-top: 1.5rem;
+    }
+
+    .home .home_txt .cta_btns .contact_btn_hero,
+    .donate_btn_hero {
+
+        padding: .6rem 1.5rem;
+        font-size: .9rem;
+        font-weight: 600;
+        color: var(--fc-white);
+        border: none;
+        background: var(--fc-orange);
+        cursor: pointer;
+    }
+
+    /*  ********* jai strip *********** */
+
+
+    .home .jai_strip {
+        height: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    .home .jai_strip h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+
+    .home .jai_strip h1 svg {
+        height: 1.8rem;
+        margin: 0 10px;
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+/* ------------------------ mobile ------------------------- */
+main {
+    overflow: hidden;
+}
+
+#bars {
+    transition-delay: .3s;
+}
+
+nav .menu-bar {
+    position: absolute;
+    height: 100vh;
+    z-index: 599;
+    top: 0;
+    right: 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: var(--ff-para-ysabeau);
+    background: linear-gradient(#ff7700, #fdb21b);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(100%);
+}
+
+nav .menu-bar a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--ff-para-ysabeau);
+
+}
+
+@media screen and (max-width:850px) {
+
+    header>nav {
+        position: fixed;
+        z-index: 500;
+    }
+
+    #bars,
+    #cross {
+        color: var(--fc-white);
+        font-size: 1.5rem;
+        display: block;
+        z-index: 600;
+    }
+
+    #cross {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-bar {
+        /* display: block; */
+        height: 200px;
+    }
+
+    .main .home .home_hero {
+        padding: 1.2rem 1.3rem;
+        gap: 2rem;
+    }
+
+    .home .home_hero .home_img {
+
+        margin-top: 2rem;
+    }
+
+    .home .home_hero .home_img img {
+        max-height: 20rem;
+    }
+
+    .home .home_hero .home_txt h1 {
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin: .8rem 0;
+
+    }
+
+    .home .home_hero .home_txt p {
+        font-size: .95rem;
+        font-weight: 500;
+    }
+
+
+    .home .home_txt .cta_btns {
+        gap: 1.5rem;
+        width: 80%;
+        margin-top: 1.3rem;
+    }
+
+    .home .home_txt .cta_btns .contact_btn_hero,
+    .donate_btn_hero {
+
+        padding: .6rem 1.5rem;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .home .jai_strip {
+        height: 3rem;
+        margin-top: 1.3rem;
+        z-index: 4;
+    }
+
+    .home .jai_strip h1 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        z-index: 4;
+    }
+
+    .home .jai_strip h1 svg {
+        height: 1.7rem;
+        margin: 0 10px;
+        color: rgb(255, 255, 255);
+        z-index: 4;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .home_hero {
+        flex-flow: wrap;
+    }
+
+
+}
+
+@media screen and (max-width:400px) {
+
+    /* nav */
+    header>nav {
+        padding: 0 1rem;
+        height: 4.2rem;
+        position: fixed;
+        z-index: 500;
+    }
+
+    nav a {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+
+    nav a img {
+        height: 3.5rem;
+    }
+
+
+
+    #bars,
+    #cross {
+        font-size: 1.3rem;
+    }
+
+    nav .menu-bar {
+        width: 80%;
+    }
+
+
+    .main .home .home_hero {
+        padding: 1rem 1rem;
+        gap: .8rem;
+    }
+
+    .home .home_hero .home_img {
+        /* position: relative; */
+    }
+
+    .home .home_hero .home_img img {
+        max-height: 18rem;
+        /* position: fixed; */
+        z-index: -1;
+        margin-top: 4rem;
+
+    }
+
+    .menu-bar {
+        z-index: 599;
+    }
+
+    .home .home_hero .home_txt h1 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        /* margin: .8rem 0; */
+
+    }
+
+    .home .home_hero .home_txt p {
+        font-size: .85rem;
+        font-weight: 500;
+    }
+
+
+    .home .home_txt .cta_btns {
+        gap: 1.2rem;
+        width: 80%;
+        margin-top: 1.3rem;
+    }
+
+    .home .home_txt .cta_btns .contact_btn_hero,
+    .donate_btn_hero {
+
+        padding: .6rem 1.5rem;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .home .jai_strip {
+        height: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .home .jai_strip h1 {
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    .home .jai_strip h1 svg {
+        height: 1.3rem;
+        margin: 0 10px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+/* ==================== Home Ends ========================= */
+
+
+
+
 /*  --------------  About section starts ------------- */
 
 .about {
@@ -381,6 +770,7 @@ a .donate_btn_hero {
     /* min-height: 90vh; */
     /* padding: 0rem 0rem; */
     /* position: relative; */
+    /* display: none; */
 }
 
 .about .about_h {
@@ -474,7 +864,7 @@ a .donate_btn_hero {
     text-align: center;
 
     z-index: 4;
-    position: relative;
+    /* position: relative; */
     background: linear-gradient(to right, #ff005541, #ff6f003f);
     border-radius: 3rem;
     border: 1px solid #ffffff;
@@ -495,12 +885,182 @@ a .donate_btn_hero {
 
 }
 
+@media screen and (max-width: 1200px) {
+    .about .about_h {
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: var(--ff-para-ysabeau);
+    }
+
+    .about .about_h>img {
+        height: 5.5rem;
+        margin: 0 3rem;
+        animation: shivling1 1.8s ease-in-out infinite alternate;
+    }
+
+    .about .about_h img:nth-child(2) {
+        height: 5.5rem;
+    }
+
+    .about-back_img {
+        margin-top: 1.5rem;
+        height: 600px;
+        padding: 0 6rem;
+    }
+
+    .about-back_img p {
+        font-size: 1.2rem;
+        line-height: 30px;
+        padding: 3rem 3.2rem;
+    }
+
+    .about-back_img .jai_mahakaal {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media screen and (max-width:850px) {
+    .about .about_h {
+        font-size: 2.2rem;
+        font-weight: 700;
+        font-family: var(--ff-para-ysabeau);
+    }
+
+    .about .about_h>img {
+        height: 5.2rem;
+        margin: 0 3rem;
+        animation: shivling1 1.8s ease-in-out infinite alternate;
+    }
+
+    .about .about_h img:nth-child(2) {
+        height: 5.2rem;
+    }
+
+    .about-back_img {
+        margin-top: 1rem;
+        height: 600px;
+        padding: 0 4rem;
+    }
+
+    .about-back_img p {
+        font-size: 1.1rem;
+        line-height: 30px;
+        padding: 2rem 2.2rem;
+    }
+
+    .about-back_img .jai_mahakaal {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    .about .about_h {
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: var(--ff-para-ysabeau);
+    }
+
+    .about .about_h>img {
+        height: 5rem;
+        margin: 0 2.3rem;
+    }
+
+    .about .about_h img:nth-child(2) {
+        height: 5rem;
+    }
+
+    .about-back_img {
+        margin-top: 1rem;
+        height: 550px;
+        padding: 0 2rem;
+    }
+
+    .about-back_img p {
+        font-size: 1rem;
+        line-height: 30px;
+        padding: 2rem 1.3rem;
+    }
+
+    .about-back_img .jai_mahakaal {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .about .about_h {
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: var(--ff-para-ysabeau);
+    }
+
+    .about .about_h>img {
+        height: 3rem;
+        margin: 0 1rem;
+    }
+
+    .about .about_h img:nth-child(2) {
+        height: 3rem;
+
+        margin: 0 1rem;
+    }
+
+    @keyframes shivling1 {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(20px);
+        }
+    }
+
+    @keyframes shivling2 {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-20px);
+        }
+    }
+
+
+    .about-back_img {
+        margin-top: 1rem;
+        height: 450px;
+        padding: 0 .5rem;
+    }
+
+
+
+    .about-back_img p {
+        font-size: .8rem;
+        line-height: 18.5px;
+        padding: 2rem 1.3rem;
+    }
+
+    .about-back_img .jai_mahakaal {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+/* ******************* about section ends ***************************** */
+
+
+
 
 
 /* ------------------- JAL ARPAN ---------------- */
 
 .jal-arpan {
     /* min-height: 100vh; */
+    /* display:s none; */
 
 }
 
@@ -606,11 +1166,118 @@ a .donate_btn_hero {
 
 }
 
+/*------------------------- Responsive code -*------------------- */
+
+@media screen and (max-width:1200px) {
+
+    .jal-h {
+        margin: 1rem 0;
+        padding: .8rem 0;
+        font-size: 2.5rem;
+    }
+
+    .jal-arpan .jal-h img {
+        height: 4rem;
+    }
+
+    .jal-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+
+    .jal-arpan .jal-container {
+        padding: 1rem 0;
+        margin-bottom: 4rem;
+    }
+
+    .jal-arpan .jal-container .jal-img,
+    .jal-vid {
+        gap: 1.5rem;
+    }
+
+    .jal-arpan .jal-container .jal-img a,
+    .jal-vid a {
+        padding: .7rem 1.1rem;
+        letter-spacing: .3px;
+    }
+
+
+    .jal-arpan .jal-container .jal-img img {
+        height: 22rem;
+    }
+
+    .jal-arpan .jal-container .jal-vid video {
+        height: 22rem;
+    }
+
+}
+
+@media screen and (max-width:630px) {
+
+    .jal-h {
+        margin: 1rem 0;
+        padding: .8rem 0;
+        font-size: 2rem;
+    }
+
+    .jal-arpan .jal-h img {
+        height: 3rem;
+    }
+
+
+    .jal-arpan .jal-container .jal-img a,
+    .jal-vid a {
+        padding: .7rem 1rem;
+        letter-spacing: .3px;
+        font-size: .9rem;
+    }
+
+
+    .jal-arpan .jal-container .jal-img img {
+        height: 14rem;
+    }
+
+    .jal-arpan .jal-container .jal-vid video {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .jal-h {
+        margin: 1rem 0;
+        padding: .8rem 0;
+        font-size: 1.2rem;
+    }
+
+    .jal-arpan .jal-h img {
+        height: 2.5rem;
+    }
+
+
+    .jal-arpan .jal-container .jal-img a,
+    .jal-vid a {
+        padding: .5rem .7rem;
+        letter-spacing: .3px;
+        font-size: .8rem;
+    }
+
+
+    .jal-arpan .jal-container .jal-img img {
+        height: 11rem;
+    }
+
+    .jal-arpan .jal-container .jal-vid video {
+        height: 20rem;
+    }
+}
 
 
 
 
-
+/* ----------------------------- jal arpan ends ----------------------- */
 
 
 /* ------------ GALLERY ------------------ */
@@ -621,6 +1288,7 @@ a .donate_btn_hero {
 .gallery {
     /* min-height: 100vh; */
     width: 100%;
+    /* display: none; */
 }
 
 .gallery .gallery_heading {
@@ -786,6 +1454,131 @@ a .donate_btn_hero {
     filter: drop-shadow(5px 5px 0px var(--fc-orange));
 }
 
+/*---------------------------  responsive codes ------------------------------ */
+@media screen and (max-width:950px) {
+
+
+    .gallery .gallery_heading {
+        height: 4rem;
+        margin: 1rem 0;
+        font-size: 2rem;
+        letter-spacing: 25px;
+    }
+
+
+    .gallery .threed-image .threed-box {
+        height: 20rem;
+        width: 16rem;
+        margin: 1rem 1.5rem;
+    }
+
+    .gallery .threed-image .threed-box:nth-child(2) {
+        height: 16rem;
+        width: 20rem;
+    }
+
+
+    .gallery .threed-image .threed-box:nth-child(3) {
+        height: 15rem;
+        width: 22rem;
+        /* width: auto; */
+    }
+
+
+    /* normal images */
+
+
+    .normal-g-img {
+        margin-top: .7rem;
+    }
+
+    .normal-g-img img {
+        height: 16rem;
+        width: auto;
+        margin: 1rem 1rem;
+        border-radius: 20px;
+    }
+
+    .gallery .more-img {
+        font-size: .85rem;
+        padding: .5rem 1.3rem;
+        font-weight: 600;
+        margin-top: .7rem;
+    }
+
+
+}
+
+
+@media screen and (max-width:500px) {
+
+
+    .gallery .gallery_heading {
+        height: 3.5rem;
+        margin: .8rem 0;
+        font-size: 1.3rem;
+        letter-spacing: 15px;
+    }
+
+
+    .gallery .threed-image .threed-box {
+        height: 16rem;
+        width: 12rem;
+        margin: .5rem 1.5rem;
+    }
+
+    .gallery .threed-image .threed-box:nth-child(2) {
+        height: 13rem;
+        width: 17rem;
+    }
+
+
+    .gallery .threed-image .threed-box:nth-child(3) {
+        height: 13rem;
+        width: 20rem;
+        /* width: auto; */
+    }
+
+
+    /* normal images */
+
+
+    .normal-g-img {
+        margin-top: .7rem;
+    }
+
+    .normal-g-img img {
+        height: 14rem;
+        width: auto;
+        margin: .7rem .6rem;
+        border-radius: 20px;
+    }
+
+    .normal-g-img img:nth-child(3) {
+        height: 10.5rem;
+        width: 17rem;
+    }
+
+    .gallery .more-img {
+        font-size: .85rem;
+        padding: .5rem 1rem;
+        font-weight: 600;
+        margin-top: .7rem;
+    }
+
+
+}
+
+
+
+/*  --------------------------------- gallery section ends ----------------------------------- */
+
+
+
+
+
+
+
 
 /* contact section */
 
@@ -796,6 +1589,7 @@ a .donate_btn_hero {
     justify-content: center;
     flex-direction: column;
     padding: 3rem 0;
+    /* display: none; */
 }
 
 .contact .contact-h {
@@ -816,6 +1610,7 @@ a .donate_btn_hero {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 
     padding: 1rem 5rem;
     margin-top: 2rem;
@@ -884,10 +1679,12 @@ a .donate_btn_hero {
     height: 10rem;
 
 }
-.form .form-fill textarea{
+
+.form .form-fill textarea {
     resize: vertical;
     max-height: 14rem;
 }
+
 .form .form-fill .form-message::placeholder {}
 
 .form .form-fill .submit-contact {
@@ -976,10 +1773,282 @@ a .donate_btn_hero {
     text-align: center;
 }
 
+/*  ------------------------- responsive code ------------------  */
+
+@media screen and (max-width:1200px) {
+
+
+
+    .contact {
+        /* padding: 3rem 0; */
+    }
+
+    .contact .contact-h {
+        font-weight: 800;
+        border-radius: 5px;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        padding: .3rem 0;
+
+    }
+
+    .form {
+        height: 33rem;
+        padding: 1rem 3rem;
+        margin-top: 1.5rem;
+    }
+
+    /* RAM JI TXT BACK */
+
+    .form .ram-txt-bg {
+        font-size: 9rem;
+        font-weight: 900;
+        z-index: 1;
+    }
+
+    .form .form-fill {
+        padding: 2rem 4rem;
+        width: 29rem;
+        z-index: 3;
+    }
+
+    .form .form-fill input {
+        margin-top: 2rem;
+        padding: .85rem;
+    }
+
+
+    .form .form-fill .form-message {
+        margin-top: 2rem;
+        padding: .85rem;
+    }
+
+    .form .form-fill textarea {
+        resize: vertical;
+        max-height: 11.5rem;
+    }
+
+    .form .form-fill .submit-contact {
+        font-size: .85rem;
+        font-weight: 600;
+    }
+
+
+
+    /* hanuman ji */
+
+    .form .contact-hanuman_ji {
+        z-index: 3;
+    }
+
+    .form .contact-hanuman_ji img {
+        height: 33.5rem;
+        z-index: 3;
+        filter: drop-shadow(5px 0px 15px #fff);
+        align-items: flex-end;
+    }
+
+    /* map */
+
+
+    .contact .map {
+        padding: 1.3rem 0 0 0;
+        gap: 2rem;
+    }
+
+    .contact .map .map-h {
+        padding: .8rem 1rem;
+        font-size: 2rem;
+    }
+
+    .contact .g-map {
+        height: 17rem;
+        width: 85%;
+    }
+
+    .contact .map h3 {
+        padding: 0 3rem;
+        font-size: 1.1rem;
+    }
+
+
+
+}
+
+@media screen and (max-width:750px) {
+
+    .contact .contact-h {
+        font-weight: 800;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        padding: .3rem 0;
+
+    }
+
+    .form {
+        height: 27rem;
+        padding: 1rem 3rem;
+        margin-top: 1.2rem;
+    }
+
+    /* RAM JI TXT BACK */
+
+    .form .ram-txt-bg {
+        font-size: 7rem;
+        font-weight: 900;
+        z-index: 1;
+    }
+
+    .form .form-fill {
+        padding: 1rem 2rem;
+        width: 29rem;
+        z-index: 3;
+    }
+
+    .form .form-fill input {
+        margin-top: 1rem;
+        padding: .85rem;
+    }
+
+
+    .form .form-fill .form-message {
+        margin-top: 1rem;
+        padding: .85rem;
+    }
+
+    .form .form-fill textarea {
+        resize: vertical;
+        max-height: 11rem;
+    }
+
+    .form .form-fill .submit-contact {
+        font-size: .85rem;
+        font-weight: 600;
+    }
+
+
+
+    /* hanuman ji */
+
+    .form .contact-hanuman_ji {
+        z-index: 3;
+    }
+
+    .form .contact-hanuman_ji img {
+        height: 27.5rem;
+        align-items: flex-end;
+    }
+
+
+}
+
+@media screen and (max-width:580px) {
+
+    .contact .contact-h {
+        font-weight: 800;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        padding: .3rem 0;
+
+    }
+
+    .form {
+        padding: 1rem 1rem;
+        margin-top: 1.2rem;
+        flex-wrap: wrap;
+        height: 50rem;
+
+    }
+
+
+    /* RAM JI TXT BACK */
+
+    .form .ram-txt-bg {
+        font-size: 6rem;
+        font-weight: 900;
+        z-index: 1;
+    }
+
+    .form .form-fill {
+        padding: 1rem 1rem;
+        width: 25rem;
+        z-index: 3;
+    }
+
+    .form .form-fill input {
+        margin-top: .9rem;
+        padding: .85rem;
+    }
+
+
+    .form .form-fill .form-message {
+        margin-top: 1rem;
+        padding: .85rem;
+    }
+
+    .form .form-fill textarea {
+        resize: vertical;
+        max-height: 11rem;
+    }
+
+    .form .form-fill .submit-contact {
+        font-size: .85rem;
+        font-weight: 600;
+    }
+
+
+
+    /* hanuman ji */
+
+    .form .contact-hanuman_ji {
+        z-index: 3;
+    }
+
+    .form .contact-hanuman_ji img {
+        height: 23rem;
+        align-items: flex-end;
+    }
+
+    /* map */
+
+
+    .contact .map {
+        padding: 1rem 0 0 0;
+        gap: 1.3rem;
+    }
+
+    .contact .map .map-h {
+        padding: .5rem 1rem;
+        font-size: 1.3rem;
+    }
+
+    .contact .g-map {
+        height: 10rem;
+        width: 85%;
+    }
+
+    .contact .map h3 {
+        padding: 0 1rem;
+        font-size: .8rem;
+    }
+
+
+
+}
+
+/* ------------------------- contact section ends ------------------------- */
+
+
+
+
+
 /* --------------------------- Footer ------------------------------  */
 
 .footer {
     background: var(--lg-orange-yellow);
+    /* display: none; */
 }
 
 .footer .footer-svg {
@@ -1114,10 +2183,6 @@ a .donate_btn_hero {
 }
 
 
-
-
-
-
 /* footer kanha ashu tech */
 
 .footer h5 {
@@ -1140,3 +2205,236 @@ a .donate_btn_hero {
     color: rgb(255, 255, 255);
     /* filter: drop-shadow(0 0 3px #650000); */
 }
+
+
+/* ------------- responsive code -------------- */
+
+
+@media screen and (max-width:1200px) {
+    
+    .footer .footer-container {
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .footer .footer-container .f-part1 {
+        gap: 1rem;
+        width: 31rem;
+    }
+    
+    .footer .footer-container .f-part1 img {
+        width: 4.8rem;
+    }
+    
+    .footer .footer-container .f-part1 h3 {
+        margin-top: 1rem;
+    
+    }
+    
+    .footer .footer-container .f-part1 h4 {
+        font-weight: 400;
+    }
+    
+    
+    
+    .footer .footer-container .f-part2 {
+        gap: .7rem;
+    }
+    
+   
+    .footer .footer-container .f-part3 {
+        gap: .7rem;
+    
+    }
+    
+    .footer .footer-container .f-part3 h4 {
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: .8px;
+    }
+    
+    .footer .footer-container .f-part3 ul {
+        gap: 1rem;
+    }
+    
+    .footer .footer-container .f-part3 ul>li {
+        margin-bottom: .8rem;
+    }
+    
+    .footer .footer-container .f-part3 .socials {
+        padding: 2rem 0 0 0;
+    }
+    
+    .footer .footer-container .f-part3 .socials a {
+        border: 2px solid #fff;
+        height: 3rem;
+        width: 3rem;
+    }
+    
+    
+    /* footer kanha ashu tech */
+    
+    .footer h5 {
+        font-size: 15px;
+        padding: 1rem;
+    }
+    
+}
+
+
+@media screen and (max-width:850px){
+    .footer .footer-container{
+        flex-wrap: wrap;
+    }
+    .footer .footer-container .f-part1 {
+        width: 35rem;
+    }
+    .footer .footer-container .f-part2 {
+        gap: .7rem;
+        /* text-align: left; */
+        width: 35rem;
+    }
+
+
+    .footer .footer-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    
+    .footer .footer-container .f-part1 img {
+        margin: auto;
+    }
+    
+    .footer .footer-container .f-part1 h3 {
+        margin-top: 1.3rem;
+     text-align: center;
+    }
+    
+    .footer .footer-container .f-part1 h4 {
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    
+    
+    .footer .footer-container .f-part2 {
+        gap: .15rem;
+    
+    }
+    
+    .footer .footer-container .f-part2 h4 {
+        margin-bottom: .5rem;
+    }
+    
+    
+    .footer .footer-container .f-part3 {
+        gap: .15rem;
+    
+    }
+    
+    .footer .footer-container .f-part3 h4 {
+        font-weight: 800;
+        margin-bottom: .5rem;
+        letter-spacing: .8px;
+    }
+    
+    .footer .footer-container .f-part3 ul {
+        gap: .15rem;
+    }
+    
+    .footer .footer-container .f-part3 ul>li {
+        list-style: none;
+        /* margin-bottom: 1rem; */
+    
+    }
+    
+    .footer .footer-container .f-part3 ul>li i {
+        color: #fff6ee;
+        margin-right: 8px;
+    }
+    
+    .footer .footer-container .f-part3 .socials {
+        padding: 1rem 0 0 0;
+    }
+    
+    .footer .footer-container .f-part3 .socials a {
+        border: 2px solid #fff;
+        height: 2.7rem;
+        width: 2.7rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--fc-white);
+        transition: .3s all ease-in-out;
+    }
+    
+   
+    
+    /* footer kanha ashu tech */
+    
+    .footer h5 {
+        text-align: center;
+        font-family: var(--ff-para-ysabeau);
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+        padding: 1rem;
+        border-top: 1px solid var(--fc-white);
+    }
+    
+    .footer h5 a {
+        text-decoration: none;
+        color: #ffdcc0;
+        transition: .3s all;
+    }
+    
+    .footer h5 a:hover {
+        color: rgb(255, 255, 255);
+        /* filter: drop-shadow(0 0 3px #650000); */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------- f ooter ends  ---------------------------*/

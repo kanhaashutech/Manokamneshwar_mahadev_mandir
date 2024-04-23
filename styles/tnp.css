@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Google font defined  */
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 200 to 800 */
+
+/* Normal FONT for Heading  */
+
+.assistant-ass_variable {
+    font-family: "Assistant", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  /* Normal FONT for Sub-Heading  */
+  
+  .tenor-sans-regular {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Paragrapgh font */
+  
+  .ysabeau-office-para-font {
+    font-family: "Ysabeau Office", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  /*  Hindi Font */
+  .tiro-devanagari sanskrit-regular {
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .tiro-devanagari sanskrit-regular-italic {
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* Font Section Ends */
+  
+  
+  
+  /* ---------------------------------- *\
+    # Universal elements declared 
+  \* ---------------------------------- */
+  
+  :root {
+  
+    /* font family */
+  
+    --ff-hindi: "Tiro Devanagari Sanskrit", serif;
+    --ff-heading-assistant: "Assistant", sans-serif;
+    --ff-s-heading-tenor: "Tenor Sans", sans-serif;
+    --ff-para-ysabeau: "Ysabeau Office", sans-serif;
+  
+    /* font colors */
+  
+    --fc-black: #000000;
+    --fc-white: #fff;
+    --fc-orange: #ff6f00;
+    --fc-dark-gray: #151414;
+  
+    /* colors */
+    --col-yellow: #ffbb00;
+  
+    /* Gradient */
+  
+    /* --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff9900, #ffd70d); */
+    --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff5900, #ff8e0d);
+    --lg-yellow: radial-gradient(#fff700, #ffffff);
+  
+  }
+  
+  body {
+    margin: auto;
+    scroll-behavior: smooth;
+  }
+  
+
+.tnp{
+    background: #fff;
+    margin: auto;
+    padding: 1rem 5rem;
+    font-family: var(--ff-para-ysabeau) ;
+}
+
+.tnp h2{
+    text-align: center;
+    font-size: 2.5rem;
+   
+}
+
+.tnp h3{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.tnp p{
+    font-size:1.1rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width:1200px) {
+  
+.tnp{
+  padding: 5rem 3rem;
+}
+
+.tnp h2{
+  font-size: 2.1rem;
+ 
+}
+
+.tnp h3{
+  font-size: 1.2rem;
+  margin: .7rem 0;
+}
+
+.tnp p{
+  font-size:1rem;
+  font-weight: 500;
+}
+
+}
+@media screen and (max-width:550px) {
+  
+.tnp{
+  padding: 5.5rem 1.2rem 2rem;
+}
+
+.tnp h2{
+  font-size: 1.4rem;
+ 
+}
+
+.tnp h3{
+  font-size: 1.08rem;
+  margin: .5rem 0;
+}
+
+.tnp p{
+  font-size:.95rem;
+  font-weight: 500;
+}
+
+}
+
+
+
+
+
+
+
+

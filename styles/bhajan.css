@@ -1,5 +1,591 @@
-*{
-margin: 0;
-padding: 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+
+/* Google font defined  */
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 200 to 800 */
+
+/* Normal FONT for Heading  */
+
+.assistant-ass_variable {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Normal FONT for Sub-Heading  */
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Paragrapgh font */
+
+.ysabeau-office-para-font {
+  font-family: "Ysabeau Office", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*  Hindi Font */
+.tiro-devanagari sanskrit-regular {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiro-devanagari sanskrit-regular-italic {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Font Section Ends */
+
+
+
+/* ---------------------------------- *\
+  # Universal elements declared 
+\* ---------------------------------- */
+
+:root {
+
+  /* font family */
+
+  --ff-hindi: "Tiro Devanagari Sanskrit", serif;
+  --ff-heading-assistant: "Assistant", sans-serif;
+  --ff-s-heading-tenor: "Tenor Sans", sans-serif;
+  --ff-para-ysabeau: "Ysabeau Office", sans-serif;
+
+  /* font colors */
+
+  --fc-black: #000000;
+  --fc-white: #fff;
+  --fc-orange: #ff6f00;
+  --fc-dark-gray: #151414;
+
+  /* colors */
+  --col-yellow: #ffbb00;
+
+  /* Gradient */
+
+  /* --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff9900, #ffd70d); */
+  --lg-orange-yellow: linear-gradient(90deg, #ff6f00, #ff5900, #ff8e0d);
+  --lg-yellow: radial-gradient(#fff700, #ffffff);
+
+}
+
+body {
+  margin: auto;
+  scroll-behavior: smooth;
+}
+
+
+.contact {
+  display: none;
+}
+
+
+.bhajan {
+  background-image: url(/img/bhajan/om-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: aqua; */
+  align-items: start;
+
+}
+
+.bhajan .links {
+  background-color: var(--fc-white);
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  gap: 1rem;
+  border-right: 2px solid var(--fc-orange);
+  padding: 2rem 1.5rem;
+  position: sticky;
+  z-index: 3;
+}
+
+.bhajan .links a {
+  color: var(--fc-black);
+  font-size: 1.2rem;
+  font-family: var(--ff-para-ysabeau);
+  text-decoration: none;
+  font-weight: 600;
+  transition: .2s all ease-in;
+}
+
+.bhajan .links a:hover {
+  color: var(--fc-orange);
+  transform: translateY(-3px);
+  border-bottom: 1px solid var(--fc-orange);
+}
+
+.lyrics {
+  width: 85%;
+  height: 100%;
+  padding: 1rem 2rem;
+  /* background-color: #888537; */
+  margin: auto;
+}
+
+.lyrics .bhajan1 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* background-color: #ff5900; */
+  /* min-height: 40rem; */
+  background: #ffffffd6;
+  align-items: start;
+  padding: 1rem 0;
+}
+
+.lyrics .bhajan1 .bhajan-txt {
+  width: 50%;
+  /* background-color: #fff700; */
+}
+
+.lyrics .bhajan1 .bhajan-txt h3 {
+  font-size: 2.5rem;
+  color: var(--fc-orange);
+  font-weight: 700;
+  font-family: var(--ff-heading-assistant);
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.lyrics .bhajan1 .bhajan-txt h4 {
+  font-size: 1.1rem;
+  font-family: var(--ff-hindi);
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+
+.lyrics .bhajan1 .video {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  padding: 6rem 0;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.lyrics .bhajan1 .video video {
+  border-radius: 1rem;
+  width: 100%;
+
+  /* height: 22rem; */
+}
+
+.lyrics .bhajan1 .audio audio {
+  width: 100%;
+  /* filter: drop-shadow(0 6px 5px #ccc5c5bb);  */
+  filter: drop-shadow(0 4px 0px #ff4400bb);
+
+}
+
+audio::-webkit-media-controls-panel {
+  width: 100%;
+  /* background: var(--lg-orange-yellow); */
+  /* background: linear-gradient(to left top,#ff8c00, #ff5900b1); */
+  background: linear-gradient(to right top, #ffb998, #fff3c9);
+  color: var(--fc-white);
+}
+
+audio::-webkit-media-controls-play-button {
+
+  line-height: 30px;
+  margin: 0 8px;
+  padding: 0;
+  background-color: #ffffff7e;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.lyrics .bhajan1 .audio button {
+  border: none;
+  background: var(--fc-orange);
+  padding: .9rem 1rem;
+  cursor: pointer;
+  width: 10rem;
+  text-align: center;
+  transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.lyrics .bhajan1 .audio button a {
+  color: var(--fc-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.lyrics .bhajan1 .audio button:hover {
+  background: var(--fc-white);
+  border: 2px solid var(--fc-orange);
+  box-shadow: 3px 4px 0 var(--fc-orange);
+}
+
+.lyrics .bhajan1 .audio button:hover a {
+  color: var(--fc-orange);
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+  .bhajan {
+    min-height: 100vh;
+    padding: 5rem 0 0;
+  }
+
+  .bhajan .links {
+    width: 15%;
+    height: 100%;
+    top: 10%;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    z-index: 3;
+  }
+
+  .bhajan .links a {
+    font-size: 1.1rem;
+  }
+
+
+  .lyrics {
+    width: 85%;
+    height: 100%;
+    padding: 1rem 2rem;
+    margin: auto;
+  }
+
+  .lyrics .bhajan1 {
+    gap: 1.5rem;
+    /* background-color: #ff5900; */
+    /* min-height: 40rem; */
+    background: #ffffffd6;
+    align-items: start;
+    padding: 1rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt {
+    width: 50%;
+    /* background-color: #fff700; */
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h3 {
+    font-size: 2rem;
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lyrics .bhajan1 .video {
+    width: 50%;
+    /* padding: 5rem 0; */
+    position: sticky;
+    top: 0;
+    gap: 3rem;
+  }
+
+  .lyrics .bhajan1 .video video {
+    border-radius: .9rem;
+    width: 100%;
+  }
+
+  .lyrics .bhajan1 .audio audio {
+    width: 100%;
+    filter: drop-shadow(0 4px 0px #ff4400bb);
+
+  }
+
+  audio::-webkit-media-controls-panel {
+    width: 100%;
+  }
+
+  audio::-webkit-media-controls-play-button {
+
+    line-height: 30px;
+    margin: 0 8px;
+    padding: 0;
+  }
+
+  .lyrics .bhajan1 .audio button {
+    padding: .8rem .9rem;
+    width: 10rem;
+  }
+
+  .lyrics .bhajan1 .audio button a {
+    font-size: .9rem;
+  }
+
+
+
+}
+
+
+@media screen and (max-width:850px) {
+  .bhajan {
+    min-height: 100vh;
+    padding: 5rem 0 0;
+  }
+
+  .bhajan .links {
+    width: 17%;
+    height: 100%;
+    top: 10%;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    z-index: 3;
+  }
+
+  .bhajan .links a {
+    font-size: 1rem;
+  }
+
+  .lyrics {
+    width: 85%;
+    height: 100%;
+    padding: 1rem 1.3rem;
+    /* background-color: #888537; */
+    margin: auto;
+  }
+
+  .lyrics .bhajan1 {
+    flex-wrap: wrap;
+    /* gap: 1.2rem; */
+    padding: 1rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt {
+    width: 90%;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: var(--ff-heading-assistant);
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h4 {
+    font-size: 1rem;
+    font-family: var(--ff-hindi);
+    font-weight: 400;
+    line-height: 1.35rem;
+  }
+
+  .lyrics .bhajan1 .video {
+    width: 85%;
+    padding: 2rem 0;
+    top: 0;
+    gap: 1rem;
+  }
+
+  .lyrics .bhajan1 .video video {
+    border-radius: 1rem;
+    width: 100%;
+
+    /* height: 22rem; */
+  }
+
+
+  .lyrics .bhajan1 .audio audio {
+    width: 100%;
+    height: 2.5rem;
+    /* filter: drop-shadow(0 6px 5px #ccc5c5bb);  */
+    filter: drop-shadow(0 4px 0px #ff4400bb);
+
+  }
+
+  audio::-webkit-media-controls-panel {
+    width: 100%;
+    /* background: var(--lg-orange-yellow); */
+    /* background: linear-gradient(to left top,#ff8c00, #ff5900b1); */
+    background: linear-gradient(to right top, #ffb998, #fff3c9);
+    color: var(--fc-white);
+  }
+
+  audio::-webkit-media-controls-play-button {
+
+    line-height: 25px;
+    margin: 0 8px;
+    padding: 0;
+    background-color: #ffffff7e;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .lyrics .bhajan1 .audio button {
+    border: none;
+    background: var(--fc-orange);
+    padding: .8rem .6rem;
+    cursor: pointer;
+    width: 8rem;
+    text-align: center;
+    transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .lyrics .bhajan1 .audio button a {
+    color: var(--fc-white);
+    font-size: .8rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+  }
+
+
+  .lyrics .bhajan1 .audio button:hover a {
+    color: var(--fc-orange);
+  }
+
+
+}
+
+
+@media screen and (max-width:550px) {
+  .bhajan {
+    min-height: 100vh;
+    padding: 4rem 0 0;
+  }
+
+  .bhajan .links {
+    width: 9%;
+    /* height: 100%; */
+    top: 10%;
+    gap: 1.3rem;
+    /* padding: 1.5rem .3rem; */
+    z-index: 3;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg);
+    text-align: end;
+    background-color: #ff000000;
+  }
+
+  .bhajan .links a {
+    font-size: .8rem;
+    white-space: nowrap;
+    padding: 0 .5rem 0 0;
+    border-right: 2px solid var(--fc-orange);
+    background-color: #ffffffca;
+  }
+
+  .lyrics {
+    width: 90%;
+    height: 100%;
+    padding: 0;
+    /* background-color: #888537; */
+    margin: auto;
+  }
+
+  .lyrics .bhajan1 {
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: .7rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt {
+    width: 92%;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--ff-heading-assistant);
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  .lyrics .bhajan1 .bhajan-txt h4 {
+    font-size: .9rem;
+    font-family: var(--ff-hindi);
+    font-weight: 400;
+    line-height: 1.2rem;
+  }
+
+  .lyrics .bhajan1 .video {
+    width: 93%;
+    padding: 1.2rem 0;
+    top: 0;
+    gap: 1rem;
+  }
+
+  .lyrics .bhajan1 .video video {
+    border-radius: .35rem;
+    width: 100%;
+  }
+
+
+  .lyrics .bhajan1 .audio audio {
+    width: 100%;
+    height: 2.2rem;
+    /* filter: drop-shadow(0 6px 5px #ccc5c5bb);  */
+    filter: drop-shadow(0 3px 0px #ff4400bb);
+
+  }
+
+  audio::-webkit-media-controls-panel {
+    width: 100%;
+  }
+
+  audio::-webkit-media-controls-play-button {
+
+    line-height: 20px;
+    margin: 0 0px;
+    padding: 0;
+    background-color: #ffffff7e;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .lyrics .bhajan1 .audio button {
+    border: none;
+    background: var(--fc-orange);
+    padding: .7rem .4rem;
+    cursor: pointer;
+    width: 8rem;
+    text-align: center;
+    transition: .3s all cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .lyrics .bhajan1 .audio button a {
+    color: var(--fc-white);
+    font-size: .8rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+  }
+
+
+  .lyrics .bhajan1 .audio button:hover a {
+    color: var(--fc-orange);
+  }
 }

@@ -211,7 +211,7 @@ body {
 }
 
 .slider {
-  width: 85rem;
+  width: 85%;
   /* max-width: 100vw; */
   height: 680px;
   margin: auto;
@@ -237,6 +237,7 @@ body {
   /* max-width: 100vw; */
   height: 100%;
   object-fit: cover;
+  /* background-position: censter; */
 }
 
 .slider .buttons {
@@ -301,7 +302,7 @@ body {
 
 .members h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.68rem;
   font-weight: 700;
   font-family: var(--ff-para-ysabeau);
   color: var(--fc-orange);
@@ -424,6 +425,384 @@ body {
 }
 
 
-#contact{
+#contact {
   padding: 0 0 2rem;
 }
+
+/*---------------- responsive code starts ------------------- */
+
+
+
+
+@media screen and (max-width:1250px) {
+
+
+  .gall_container .gall_img {
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+
+
+  .gall_container .gall_img .mandir_video_bg video {
+    width: 80%;
+    margin-top: 5rem;
+  }
+
+
+  .gall_container .gall_img .mandir_img {
+    width: 100%;
+    padding: 1.2rem 1rem;
+  }
+
+  .gall_container .gall_img .mandir_img img {
+    width: 15rem;
+    margin: .8rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:hover {
+    transform: scale(1.03);
+
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(1) {
+    width: 30rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(5) {
+    width: 28rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(6) {
+    width: 28rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(8) {
+    width: 30rem;
+  }
+
+  .gall_container .gall_shivratri h1 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  .gall_container .gall_shivratri h1 img {
+    position: absolute;
+    top: -8.4rem;
+    height: 22rem;
+    width: 10rem;
+    animation: trishul 3s cubic-bezier(0.3, 1, 0.5, .25) .2s infinite;
+  }
+
+  @keyframes trishul {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+
+
+  /*--------------------- slider-----------------------------*/
+
+  .slide_container {
+    padding: 1.5rem 0 .8rem;
+  }
+
+  .slider {
+    width: 85%;
+    height: 600px;
+    border-radius: 2.5rem;
+  }
+
+
+  .slider .list img {
+    width: 75rem;
+  }
+
+
+
+  .slider .buttons button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider .dots {
+    bottom: 7px;
+  }
+
+  .slider .dots li {
+    width: 7px;
+    height: 7px;
+  }
+
+  .slider .dots li.active {
+    width: 25px;
+  }
+
+
+  /* ------------ members------------ */
+  .members {
+    padding: 1.5rem 0;
+  }
+
+  .members h1 {
+    font-size: 2.3rem;
+    padding: 1rem 0;
+  }
+
+  .mem_container {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .mem_container .card {
+    width: 13rem;
+  }
+
+  .mem_container .card .c-img {
+    width: 100%;
+    height: 12rem;
+  }
+
+
+  .mem_container .card .c-txt h3 {
+    font-size: 1.1rem;
+  }
+
+  .mem_container .card .c-txt h5 {
+    font-size: 12px;
+  }
+
+  .mem_container .card .c-txt .mem-socials {
+    padding: 8px 0;
+  }
+
+  .mem_container .card .c-txt .mem-socials a {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .mem_container .card .c-txt .mem-socials a i {
+    font-size: 1rem;
+  }
+
+  #contact {
+    padding: 0 0 2rem;
+  }
+}
+
+@media screen and (max-width:850px) {
+
+
+  .gall_container .gall_img .mandir_video_bg video {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .gall_container .gall_img {
+    width: 100%;
+    padding: 1rem .8rem;
+    gap: 1rem;
+  }
+
+  .gall_container .gall_img .mandir_video_bg {
+
+    /* height: 20rem;
+    border-radius:5px; */
+  }
+
+  .gall_container .gall_img .mandir_video_bg video {
+    width: 98%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+
+  .gall_container .gall_img .mandir_img {
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .gall_container .gall_img .mandir_img img {
+    width: 9rem;
+    margin: .8rem .3rem;
+    border-radius: .7rem;
+    object-fit: cover;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(1) {
+    width: 20rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(5) {
+    width: 18rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(6) {
+    width: 18rem;
+  }
+
+  .gall_container .gall_img .mandir_img img:nth-child(8) {
+    width: 18rem;
+  }
+
+
+
+  .gall_container .gall_shivratri h1 {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+
+  .gall_container .gall_shivratri h1 img {
+    position: absolute;
+    top: -5.09rem;
+    left: 0;
+    height: 14rem;
+    width: 7rem;
+    animation: trishul 3s cubic-bezier(0.3, 1, 0.5, .25) .3s infinite;
+  }
+
+  @keyframes trishul {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+
+  /*--------------------- slider-----------------------------*/
+
+  .slide_container {
+    padding: 1rem 0 .8rem;
+  }
+
+  .slider {
+    width:98%;
+    height:450px;
+    border-radius: 7px;
+  }
+
+  
+  .slider .list img {
+    /* width:40rem; */
+    width: 100vw;
+  }
+
+
+
+  .slider .buttons button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider .dots {
+    bottom: 7px;
+  }
+
+  .slider .dots li {
+    width: 7px;
+    height: 7px;
+  }
+
+  .slider .dots li.active {
+    width: 25px;
+  }
+
+
+  /* ------------ members------------ */
+  .members {
+    padding: 1rem 0;
+    background: linear-gradient(#fff,#ffd3aa39,#fff);
+  }
+
+  .members h1 {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+  }
+
+  .mem_container {
+    /* padding: 1.5rem; */
+    gap: .65rem;
+    padding: 1rem 0;
+  }
+
+  .mem_container .card {
+    width: 8.3rem;
+  }
+
+  .mem_container .card .c-img {
+    width: 100%;
+    height: 7.8rem;
+  }
+
+
+  .mem_container .card .c-txt h3 {
+    font-size: .8rem;
+  }
+
+  .mem_container .card .c-txt h5 {
+    font-size: 10px;
+  }
+
+  .mem_container .card .c-txt .mem-socials {
+    padding: 5px 0;
+  }
+
+  .mem_container .card .c-txt .mem-socials a {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .mem_container .card .c-txt .mem-socials a i {
+    font-size: .7rem;
+  }
+
+  #contact {
+    padding: 0 0 2rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive code ends */
