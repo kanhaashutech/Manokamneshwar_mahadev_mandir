@@ -138,13 +138,13 @@
                 TEMPLE <img src="img/shivling.png" alt="manokamneshwar mahadev mandir shantinagar"></h1>
 
             <div class="about-back_img">
-                <p>" The temple Is around 35 years old and this is very amazing temple where , there are some incidents
-                    when people just asking their wishes to the Lord Shiva and the wishes of their's will become real in
-                    just some time. The power of this temple was mindblowing because it has very good environment inside
-                    it . In the time of Shivratri, the mandir was full of devotees of Lord Shiva , there is not a small
-                    place to stand too. All the people are goes to the mandir at Shivratri and it has amazing experience
-                    when there was Shivratri. The devotees starts coming to the temple from 4:30 AM in the morning. This
-                    shows how the bhakts/devotees of Lord Shiva love him. "
+                <p>"The temple is about 35 years old, and it's a really beautiful temple where, according to certain
+                    stories, people can just ask Lord Shiva their wishes, and those wishes will come true in a short
+                    while. This temple's power was astounding due to its excellent interior setting. During Shivratri,
+                    the mandir was crowded with Lord Shiva's followers, with little space for standing. Everybody
+                    attends the mandir on Shivratri, and everyone has an incredible experience. The pilgrims begin
+                    arriving at the temple about 4:30 in the morning. This demonstrates the depth of Lord Shiva's
+                    devotion among his followers."
 
                     <span class="jai_mahakaal">JAI SHREE MAHAKAAL</span>
                 </p>
@@ -218,7 +218,7 @@
                     <img class="threed-back" src="img/Gallery img/shiv-ji-img1-removed-bg.png"
                         alt="manokamneshwar mahadev mandir shantinagar" srcset="">
                 </div>
-                
+
                 <!-- 3 -->
                 <div class="threed-box">
                     <img class="threed-front" src="img/Gallery img/shiv-ji-universe.jpg"
@@ -242,12 +242,16 @@
             <div class="normal-g-img">
                 <img src="img/Gallery img/ashu-sitting.jpg" alt="ashutosh bhole">
 
-                <img src="img/Gallery img/ashu-quote img.jpg" alt="manokamneshwar mahadev mandir shantinagar">
+                <img src="img/shivji sringar.jpg" alt="manokamneshwar mahadev mandir shantinagar">
+                <!-- <img src="img/Gallery img/ashu-quote img.jpg" alt="manokamneshwar mahadev mandir shantinagar"> -->
                 <img src="img/Gallery img/shivling-sringar-1.avif" alt="manokamneshwar mahadev mandir shantinagar">
 
 
             </div>
-
+            <div class="notice">
+                <h3>If you have more photos of mandir and shiv ji you can share it on our whatsapp +91 9303580738 or at
+                    email ashutosh.kanhaashutech@gmail.com</h3>
+            </div>
             <a class="more-img" href="gallery.html">
                 MORE
             </a>
@@ -263,27 +267,57 @@
 
                 <!-- <h1 class="ram-txt-bg">OM NAMAH SHIVAY</h1> -->
                 <h1 class="ram-txt-bg">JAI SHREE RAM</h1>
-                
+
                 <div class="form-fill">
+                    <form name="submit-to-google-sheet" id="contact-form" onsubmit="sendEmail(); reset(); return false;">
 
-                    <input type="text" placeholder="Name*">
-                    <input type="text" placeholder="Phone No.*" important>
-                    <input type="email" name="Email" id="" placeholder="Email (optional)">
-                    <!-- <input type="text" class="form-message" placeholder="Message*"> -->
+                        <input type="text" name="Name" required=""  placeholder="Name*">
+                        <input type="text" name="Phone No." required=""  placeholder="Phone No.*" >
+                        <input type="email" name="Email" id="" placeholder="Email (optional)">
+                        <!-- <input type="text" class="form-message" placeholder="Message*"> -->
 
-                    <textarea name="message" class="form-message" aria-label="message" placeholder="Your message...*"
-                        required="" class="input-field"></textarea>
-
-                    <input type="button" class="submit-contact" value="Submit">
-
+                        <textarea name="Message" class="form-message" aria-label="message"
+                            placeholder="Your message...*" class="input-field"></textarea>
+                            <span id="success"></span>
+                        <input type="submit" class="submit-contact" value="Submit">
+                        <!-- <button type="submit"></button> -->
+                    </form>
                 </div>
 
-                <div class="contact-hanuman_ji">
-                    <!-- <img src="img/contact/ashirvad-2.png" alt=""> -->
-                    <!-- <img src="img/contact/maa+pita ji.png" alt=""> -->
-                    <img src="img/contact/contact-hanuman_ji.png" alt="">
 
-                </div>
+               
+
+                   
+
+
+
+                    <script>
+                        // const scriptURL = 'https://script.google.com/macros/s/AKfycbznxou-9pWKuUDQT50A2NYvB-di7Q97sCtkI_WaBFZHqYp45TlGb_tQTuXqrRMLMNqd/exec'
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbznxou-9pWKuUDQT50A2NYvB-di7Q97sCtkI_WaBFZHqYp45TlGb_tQTuXqrRMLMNqd/exec'
+                        const form = document.forms['submit-to-google-sheet']
+                        const success = document.getElementById('success');
+
+                        form.addEventListener('submit', e => {
+                            e.preventDefault()
+                            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                .then(response => {
+                                    success.innerHTML = "Data Successfully Submitted";
+
+                                    setTimeout(function () {
+                                        success.innerHTML = " ";
+                                    }, 3000)
+                                    form.reset();
+                                })
+                                .catch(error => console.error('Error!', error.message))
+                        })
+                    </script>
+
+                    <div class="contact-hanuman_ji">
+                        <!-- <img src="img/contact/ashirvad-2.png" alt=""> -->
+                        <!-- <img src="img/contact/maa+pita ji.png" alt=""> -->
+                        <img src="img/contact/contact-hanuman_ji.png" alt="">
+
+                    </div>
             </div>
             <!-- Map  -->
 
@@ -326,12 +360,11 @@
             <!-- <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 250" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,50L40,66.7C80,83,160,117,240,116.7C320,117,400,83,480,58.3C560,33,640,17,720,45.8C800,75,880,150,960,175C1040,200,1120,175,1200,137.5C1280,100,1360,50,1440,37.5C1520,25,1600,50,1680,62.5C1760,75,1840,75,1920,91.7C2000,108,2080,142,2160,133.3C2240,125,2320,75,2400,45.8C2480,17,2560,8,2640,41.7C2720,75,2800,150,2880,158.3C2960,167,3040,108,3120,70.8C3200,33,3280,17,3360,45.8C3440,75,3520,150,3600,175C3680,200,3760,175,3840,158.3C3920,142,4000,133,4080,129.2C4160,125,4240,125,4320,141.7C4400,158,4480,192,4560,191.7C4640,192,4720,158,4800,145.8C4880,133,4960,142,5040,129.2C5120,117,5200,83,5280,66.7C5360,50,5440,50,5520,79.2C5600,108,5680,167,5720,195.8L5760,225L5760,250L5720,250C5680,250,5600,250,5520,250C5440,250,5360,250,5280,250C5200,250,5120,250,5040,250C4960,250,4880,250,4800,250C4720,250,4640,250,4560,250C4480,250,4400,250,4320,250C4240,250,4160,250,4080,250C4000,250,3920,250,3840,250C3760,250,3680,250,3600,250C3520,250,3440,250,3360,250C3280,250,3200,250,3120,250C3040,250,2960,250,2880,250C2800,250,2720,250,2640,250C2560,250,2480,250,2400,250C2320,250,2240,250,2160,250C2080,250,2000,250,1920,250C1840,250,1760,250,1680,250C1600,250,1520,250,1440,250C1360,250,1280,250,1200,250C1120,250,1040,250,960,250C880,250,800,250,720,250C640,250,560,250,480,250C400,250,320,250,240,250C160,250,80,250,40,250L0,250Z"></path></svg> -->
 
             <div class="footer-container">
-                
+
                 <div class="f-part1">
                     <img src="img/mandir_logo.jpg" alt="" class="f-logo">
                     <h3>MANOKAMNESHWAR MAHADEV MANDIR , SHANTINAGAR</h3>
-                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat provident nulla illo ducimus
-                        dolorem nihil, minima debitis aliquid perferendis labore.</h4>
+                    <h4>Baba ki bhakti karna hi jivan ka saar hai bolo jai shree mahakaal</h4>
                 </div>
 
                 <div class="f-part2">
@@ -351,9 +384,9 @@
                     <ul>
                         <li><i class="fa-solid fa-map-location-dot"></i> Shiv Mandir (HPFQ+7C3),
                             Jawahar Nagar, Mhow Gaon, Madhya Pradesh 453441</li>
-                        <li><i class="fa-solid fa-envelope"></i> Manokamneshwarmahadev@gmail.com</li>
+                        <li><i class="fa-solid fa-envelope"></i> ashutosh.kanhaashutech@gmail.com</li>
                         <!-- <li><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Manokamneshwarmahadev@gmail.com</li> -->
-                        <li><i class="fa-solid fa-phone"></i> +91 93035807XX</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 99266 78203</li>
                     </ul>
 
                     <!-- socials -->

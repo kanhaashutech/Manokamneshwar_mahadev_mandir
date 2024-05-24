@@ -1454,6 +1454,26 @@ nav .menu-bar a {
     filter: drop-shadow(5px 5px 0px var(--fc-orange));
 }
 
+.gallery .notice{
+    font-weight: 300;
+    font-family: var(--ff-para-ysabeau);
+    height: 1rem;
+    margin: auto;
+    width: 85%;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* margin: 1rem; */
+    /* background-color: #000000; */
+}
+.gallery .notice h3{
+  
+    text-align: center;
+    color: #252525;
+    font-weight: 400;
+}
+
 /*---------------------------  responsive codes ------------------------------ */
 @media screen and (max-width:950px) {
 
@@ -1506,6 +1526,28 @@ nav .menu-bar a {
         margin-top: .7rem;
     }
 
+
+    .gallery .notice{
+        font-weight: 300;
+        font-family: var(--ff-para-ysabeau);
+        /* height: 1rem; */
+        height: auto;
+        margin: auto;
+        /* width: 85%; */
+        font-size: .7rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        /* margin: 1rem; */
+        /* background-color: #000000; */
+    }
+    .gallery .notice h3{
+      
+        text-align: center;
+        color: #252525;
+        font-weight: 400;
+    }
+    
 
 }
 
